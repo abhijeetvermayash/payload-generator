@@ -40,7 +40,7 @@ render(){
 return (
     <div>
      <h2> Enter Divider Details Here</h2><br/>
-    <Input placeholder='Enter Thickness' error = {this.state.error !== ""} style ={{width:400}} type= "number" min="1" required onChange= {e => {this.setState({error:""});this.setState({finalObj:{...this.state.finalObj,thickness : e.target.value}})}}/><br/><br/><br/>
+    <Input placeholder='Enter Thickness' error = {this.state.error !== ""} style ={{width:400}} type= "number" min="1" required onChange= {e => {this.setState({error:""});this.setState({finalObj:{...this.state.finalObj,thickness : Number(e.target.value)}})}}/><br/><br/><br/>
     <ColorPickerComponent state = {this.state}/><br/><br/>
     <div style={{display:"flex",flexDirection:"row"}}>
     <div style={{marginRight:20}}>

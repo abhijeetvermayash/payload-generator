@@ -7,7 +7,7 @@ class RightSectionTop extends React.Component
 render(){
 
     const textView=(element)=>{
-        return (<div className='textView' style={{color:element.color, fontSize:element.size, fontWeight:getWeight(element.fontType)}}>
+        return (<div className='textView' style={{color:element.color, fontSize:element.textSize, fontWeight:getWeight(element.fontType)}}>
                 <article className='textArticle'>
                      {element.text}
                     </article>
@@ -20,7 +20,7 @@ render(){
     }
     const imageView=(element)=>{
         return (<div className='imageView'>
-                <img className = "image" src = {element.url}/>
+                <img className = "image" src = {element.url} style ={{width:element.size, height:element.size}}/>
               </div>)
     }
     const spaceView=(element)=>{

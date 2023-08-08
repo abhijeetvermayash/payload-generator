@@ -34,7 +34,7 @@ render(){
 return (
     <div>
      <h2> Enter Space Details Details Here</h2><br/>
-    <Input placeholder='Enter Width' type= "number" style ={{width:400}} required onChange= {e => this.setState({finalObj:{...this.state.finalObj,width : e.target.value}})}/><br/><br/><br/>
+    <Input placeholder='Enter Width' type= "number" style ={{width:400}} required onChange= {e => this.setState({finalObj:{...this.state.finalObj,width : Number(e.target.value)}})}/><br/><br/><br/>
     <Input placeholder='Enter Weight' type= "number"  style ={{width:400}} onChange= {e => this.setState({finalObj:{...this.state.finalObj,weight : e.target.value}})}/><br/><br/><br/>
     <div style={{display:"flex",flexDirection:"row"}}>
     <div style={{ marginRight:20}}>

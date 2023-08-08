@@ -62,7 +62,7 @@ return (
     <div>
       <h2> Enter Your Text Details Here</h2><br/>
     <Input error={this.state.error !== ""} placeholder='Enter Text To be shown' style ={{width:410}} required onChange= {e => { this.setState({error:""});this.setState({finalTextObj:{...this.state.finalTextObj,text : e.target.value}})}}/><br/><br/><br/>
-    <Input placeholder='Enter Text size' min = "2" type='number' style ={{width:410}} onChange= {e => this.setState({finalTextObj:{...this.state.finalTextObj,textSize : e.target.value}})}/><br/><br/><br/>
+    <Input placeholder='Enter Text size' min = "2" type='number' style ={{width:410}} onChange= {e => this.setState({finalTextObj:{...this.state.finalTextObj,textSize : Number(e.target.value)}})}/><br/><br/><br/>
     <Dropdown
     placeholder='FontType'
     fluid

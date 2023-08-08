@@ -42,7 +42,7 @@ return (
     <div>
          <h2> Enter Image Details Here</h2><br/>
     <Input placeholder='Enter Image URL' error = { this.state.error !== ""} required style ={{width:400}} onChange= {e => {this.setState({error:""}); this.setState({finalObj:{...this.state.finalObj,url : e.target.value}})}}/><br/><br/><br/>
-    <Input placeholder='Enter Image size' style ={{width:400}} required type='number' onChange= {e => this.setState({finalObj:{...this.state.finalObj,size : e.target.value}})}/><br/><br/><br/>
+    <Input placeholder='Enter Image size' style ={{width:400}} required type='number' onChange= {e => this.setState({finalObj:{...this.state.finalObj,size : Number(e.target.value)}})}/><br/><br/><br/>
     <div style={{display:"flex",flexDirection:"row"}}>
     <div style={{marginRight:20}}>
     <Button color='teal' onClick={this.handleBack}>
