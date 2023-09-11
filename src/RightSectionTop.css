@@ -115,3 +115,6 @@
     flex-basis: auto;
 }
 
+.ui.toggle.checkbox input:focus:checked~.box:before, .ui.toggle.checkbox input:focus:checked~label:before {
+    background-color: #4BB543!important;
+}

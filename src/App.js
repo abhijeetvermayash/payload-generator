@@ -18,6 +18,10 @@ class App extends React.Component {
   , showBackgroundDetails : false
   , payload : []
   , ui : ""
+  , useAccordion : false 
+  , expanded : false 
+  , expandDownwards : false
+  , linesBeforeExpansion : 1
   , stateFunctions : {
       setAddLine: (value) => this.SetAddLine(value)
     , setSelectElement: (value) => this.SetSelectElement(value)
@@ -30,6 +34,10 @@ class App extends React.Component {
     , setPayload : (value) => this.SetPayload(value)
     , setUI : (value) => this.SetUI(value)
     , setBG : (value) =>{this.setState({showBackgroundDetails:value})}
+    , setAccordion :(value) => {this.setState({useAccordion:value})}
+    , setExpanded : (value) => {this.setState({expanded:value})}
+    , setLinesBeforeExpansion : (value) =>{this.setState({linesBeforeExpansion:value})}
+    , setExpandDownwards : (value) => {this.setState({expandDownwards:value})}
   }};
 
  SetAddLine = (value) => {

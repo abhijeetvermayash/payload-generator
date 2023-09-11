@@ -1,9 +1,14 @@
 import React from 'react';
 import "./RightSectionTop.css"
+import {Checkbox} from 'semantic-ui-react'
 
 class RightSectionTop extends React.Component
 
 {   
+
+    state = {
+        accordion : false
+    }
 render(){
 
     const textView=(element)=>{
@@ -24,7 +29,7 @@ render(){
               </div>)
     }
     const spaceView=(element)=>{
-          return (element.weight ? <div className='spaceWithWeight'></div> :
+          return (element.weight ? <div className='spaceWithWeight' style = {{flex:element.weight}}></div> :
           element.width ? <div style={{width:element.width,height:'1px'}}></div> 
           :addDefaultSpace())
          
@@ -75,6 +80,10 @@ return (
     {mappedData}
     </div>
     </div>
+    {/* </div><br/><br/>
+     <div style={{display:"flex"}}> 
+     <h3 style={{marginRight:20}}>Accordion</h3><Checkbox toggle />
+     </div> */}
     </>  
 )}
 };
