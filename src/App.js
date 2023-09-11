@@ -4,6 +4,7 @@ import { Divider, Grid,  Segment } from 'semantic-ui-react'
 import LeftSection from "./LeftSection"
 import RightSectionBottom from "./RightSectionBottom"
 import RightSectionTop from "./RightSectionTop"
+import Document from "./Document";
  
 class App extends React.Component {
 
@@ -90,6 +91,7 @@ SetUI =(value) =>{
       <Grid.Column>
       <RightSectionTop state = {this.state}/> <br/><br/>
       <RightSectionBottom state={this.state}/>
+      <Document state = {this.state}/>
       </Grid.Column>
     </Grid>
 
